@@ -1,14 +1,32 @@
 import React, { useState, useContext, createContext } from "react";
 
-//Good template for createContext
-
 const ShowContext = createContext();
 
 export const ShowProvider = ({ children }) => {
     const [showData, setShowData] = useState([]);
+    const [inputValue, setInputValue] = useState("");
+    const [searchString, setSearchString] = useState("");
+    const [filter, setFilter] = useState("");
+    const [sortBy, setSortBy] = useState("rating");
+    const [data, setData] = useState([]);
+    const [selectedFilterOption, setSelectedFilterOption] = useState("all");
 
     return (
-        <ShowContext.Provider value={{ showData, setShowData }}>
+        <ShowContext.Provider value={{ 
+            showData, 
+            setShowData,
+            inputValue,
+            setInputValue,
+            searchString,
+            setSearchString,
+            filter,
+            setFilter,
+            sortBy,
+            setSortBy,
+            data,
+            setData,
+            selectedFilterOption,
+            setSelectedFilterOption, }}>
             {children}
         </ShowContext.Provider>
     );
