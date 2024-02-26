@@ -1,7 +1,8 @@
 import React from 'react'
+import { SearchWidget } from '../../components'
 
 export default function index() {
   return (
-    <div>Search Page</div>
+    <SearchWidget />
   )
 }

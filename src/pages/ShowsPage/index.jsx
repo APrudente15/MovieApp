@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import { ShowGallery } from "../../components";
 
-export default function index() {
-  return (
-    <div>Shows Page</div>
-  )
+export default function ShowsPage() {
+  return(
+  <ShowGallery />
+    )
 }
