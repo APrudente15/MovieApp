@@ -3,12 +3,17 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import * as Pages from "./pages";
 import { Header } from "./components";
-import { ShowProvider } from "./contexts";
+
+//redux stuff here
+import {useSelector, useDispatch} from 'react-redux'; 
+import { actionCreators } from './action-creators';
+import { bindActionCreators } from 'redux';
+
 
 function App() {
+  
   return (
     <>
-    <ShowProvider>
       <Routes>
         <Route path = "/" element={<Header />}>
         <Route path="/" element={<Pages.HomePage />} />
@@ -18,7 +23,6 @@ function App() {
         <Route path="*" element={<Pages.NotFoundPage />} />
         </Route>
       </Routes>
-      </ShowProvider>
     </>
   );
 }
