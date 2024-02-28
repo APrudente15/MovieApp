@@ -1,5 +1,6 @@
 import { useShow } from "../../contexts";
 import { useEffect } from "react";
+import '../../App.css'
 
 const SearchForm = () => {
   const {
@@ -66,19 +67,23 @@ const SearchForm = () => {
     }
   };
 
+  const style = {
+
+  }
+
   return (
-    <>
+    <div className ="form-container">
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleInput} required />
         <input type="submit" value="search" />
       </form>
-      <select className="filter-Movies" onChange={handleSortChange}>
+      <select className="filter-movies" onChange={handleSortChange}>
         <option value="all">All</option>
         <option value="rating">Rating</option>
         <option value="date">Date</option>
         <option value="language">Language</option>
       </select>
-    </>
+    </div>
   );
 };
 export default SearchForm;

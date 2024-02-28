@@ -39,7 +39,7 @@ header, footer, main {
   padding: 1rem;
 }
 
-form {
+/* form {
   text-align: center;
   padding: 1rem;
 }
@@ -47,6 +47,37 @@ form {
 form > input {
   font-size: 2rem;
   margin-right: 1rem;
+} */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-top: 50px; 
+}
+
+.form-container input[type="text"],
+.form-container input[type="submit"],
+.form-container input[value="search"] {
+  width: 175px; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  font-size: 1.3em;
+}
+
+/*filter needs to be fixed!*/
+
+.filter-Movies {
+  width: 320px; 
+  padding: 15px; 
+  margin-top: 20px; 
+  font-size: 1.3em;
+  margin-top: 20px;
+}
+
+.filter-movies option {
+  padding: 10px;
+  font-size: 16px; 
 }
 
 .shows {
