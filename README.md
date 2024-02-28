@@ -1,8 +1,8 @@
-# React + Vite
+# LFA MovieApp Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This MovieApp is part of training at LFA!
+To complete this App I learnt React, components, useEffect, useContext. 
 
-Currently, two official plugins are available:
+In this App, you will be able to access a range of movies in the Shows page. In the Search Shows page, you will be able to filter movies with a keyword, you can further filter movies by ratings and language. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I hope you enjoy this app! 

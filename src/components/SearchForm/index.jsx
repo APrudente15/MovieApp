@@ -1,5 +1,6 @@
-import { useShow } from "../../Context";
+import { useShow } from "../../contexts";
 import { useEffect } from "react";
+
 const SearchForm = () => {
   const {
     setInputValue,
@@ -11,7 +12,7 @@ const SearchForm = () => {
     setSelectedFilterOption,
     data,
     setData,
-  } = useSearch();
+  } = useShow();
 
   useEffect(() => {
     const SearchAPI = async () => {
@@ -24,23 +25,28 @@ const SearchForm = () => {
     };
     SearchAPI();
   }, [searchString, setData]);
+
   useEffect(() => {
     const filteredData = filterData(data, selectedFilterOption);
     setShowData(filteredData);
   }, [selectedFilterOption, data, setShowData]);
+
   const handleInput = (e) => {
     const newInput = e.target.value;
     setInputValue(newInput);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearchString(inputValue);
     setInputValue("");
   };
+
   const handleSortChange = (e) => {
     const selectedOption = e.target.value;
     setSelectedFilterOption(selectedOption);
   };
+
   const filterData = (data, selectedFilterOption) => {
     switch (selectedFilterOption) {
       case "all":
@@ -59,6 +65,7 @@ const SearchForm = () => {
         return data;
     }
   };
+
   return (
     <>
       <form onSubmit={handleSubmit}>

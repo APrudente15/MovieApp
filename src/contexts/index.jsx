@@ -12,7 +12,8 @@ export const ShowProvider = ({ children }) => {
     const [selectedFilterOption, setSelectedFilterOption] = useState("all");
 
     return (
-        <ShowContext.Provider value={{ 
+        <ShowContext.Provider 
+        value={{ 
             showData, 
             setShowData,
             inputValue,
